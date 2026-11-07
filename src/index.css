@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ivory-base: #FFF9F0;
+    --gold-primary: #C5A15B;
+    --gold-bright: #F7E7CE;
+    --maroon-deep: #5A0E1F;
+    --maroon-royal: #3E0613;
+    --maroon-darkest: #1F0309;
+    --saffron-muted: #D9A441;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #1F0309;
+    color: #FFF9F0;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle gold scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1A0308;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C5A15B;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E8CA85;
+  }
+}
+
+@layer utilities {
+  /* 3D Perspective for Temple Doors */
+  .perspective-doors {
+    perspective: 1800px;
+  }
+
+  /* Royal Gold Foil Shimmer Text */
+  .text-gold-foil {
+    background: linear-gradient(135deg, #FFF1D0 0%, #E6C875 25%, #C5A15B 50%, #9B782E 75%, #F4D58D 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShine 6s ease-in-out infinite alternate;
+  }
+
+  /* Royal Maroon Velvet Background Texture */
+  .bg-royal-velvet {
+    background: radial-gradient(circle at 50% 30%, #4D0A1B 0%, #2B050F 55%, #180208 100%);
+  }
+
+  /* Traditional Gold Filigree Parchment */
+  .bg-royal-card {
+    background: linear-gradient(145deg, #2A050F 0%, #1D030A 100%);
+    border: 1.5px solid rgba(197, 161, 91, 0.6);
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(197, 161, 91, 0.08);
+  }
+
+  /* Ornate Indian Jharokha Arch Frame */
+  .jharokha-frame {
+    border-radius: 140px 140px 18px 18px;
+    box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(197, 161, 91, 0.5);
+  }
+
+  .jharokha-mandir {
+    border-radius: 200px 200px 24px 24px;
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.9), 0 0 0 1.5px rgba(197, 161, 91, 0.7);
+  }
+}
+
+/* Animations */
+@keyframes goldShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes diyaFlicker {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 12px rgba(217, 164, 65, 0.9));
+  }
+  25% {
+    transform: scale(1.08) translate(-1px, -1px);
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(245, 227, 189, 1));
+  }
+  50% {
+    transform: scale(0.94) translate(1px, 0);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 9px rgba(217, 164, 65, 0.75));
+  }
+  75% {
+    transform: scale(1.04) translate(0, -1px);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 15px rgba(245, 227, 189, 0.9));
+  }
+}
+
+.diya-flame {
+  animation: diyaFlicker 2.4s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Bell sway animation */
+@keyframes bellSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+}
+
+.bell-sway {
+  animation: bellSway 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

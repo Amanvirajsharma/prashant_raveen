@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="goldGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F7E7CE" />
+      <stop offset="50%" stop-color="#C5A15B" />
+      <stop offset="100%" stop-color="#8C6D2D" />
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#5A0E1F" />
+  <circle cx="32" cy="32" r="27" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3 2" />
+  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#goldGrad)" stroke-width="1" />
+  <!-- Monogram P & R -->
+  <text x="32" y="38" font-family="'Cormorant Garamond', serif" font-size="20" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="1">P&amp;R</text>
+  <circle cx="32" cy="14" r="2" fill="#D9A441" />
+  <circle cx="32" cy="50" r="2" fill="#D9A441" />
+</svg>
