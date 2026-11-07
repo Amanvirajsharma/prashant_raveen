@@ -66,7 +66,7 @@ export const GallerySection: React.FC = () => {
         {/* Editorial Photo Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {gallery.map((photo, index) => {
-            const isFeatured = index === 0 || index === 3;
+            const isFeatured = index === 0;
 
             return (
               <motion.div

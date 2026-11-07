@@ -222,27 +222,6 @@ export const weddingData = {
 
   gallery: [
     {
-      id: "gal-1",
-      title: "Royal Portraits on the Palace Terrace",
-      subtitle: "Prashant & Raveena at Golden Hour",
-      src: "/images/story-candid.jpg",
-      aspect: "landscape",
-    },
-    {
-      id: "gal-2",
-      title: "The Regal Bride",
-      subtitle: "Raveena in a Red & Gold Bridal Saree",
-      src: "/images/bride.jpg",
-      aspect: "portrait",
-    },
-    {
-      id: "gal-3",
-      title: "The Royal Groom",
-      subtitle: "Prashant in a Navy & Gold Sherwani",
-      src: "/images/groom.jpg",
-      aspect: "portrait",
-    },
-    {
       id: "gal-4",
       title: "The Sacred Mandap by Night",
       subtitle: "Floral Canopies & Holy Havan Kund",
@@ -278,10 +257,4 @@ export const weddingData = {
       aspect: "landscape",
     },
   ] as GalleryPhoto[],
-
-  rsvp: {
-    whatsappNumber: "919876543210",
-    emailContact: "invitation@prashantraveena.com",
-    helplineText: "+91 98765 43210 / +91 98765 43211",
-  },
 };

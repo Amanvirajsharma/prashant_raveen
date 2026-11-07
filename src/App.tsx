@@ -11,7 +11,6 @@ import { CountdownTimer } from './components/CountdownTimer';
 import { FamilySection } from './components/FamilySection';
 import { VenueSection } from './components/VenueSection';
 import { GallerySection } from './components/GallerySection';
-import { RSVPSection } from './components/RSVPSection';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
@@ -61,9 +60,6 @@ export const App: React.FC = () => {
 
         {/* Chapter 9: Memories in Frame Gallery & Lightbox */}
         <GallerySection />
-
-        {/* Chapter 10: RSVP with Direct WhatsApp Confirmation */}
-        <RSVPSection />
 
         {/* Chapter 11: Vedic Closing Blessing */}
         <Footer />
